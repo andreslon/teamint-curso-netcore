@@ -14,7 +14,6 @@ namespace TGL.WebApp.Data
         {
             Students.Add(new Student
             {
-                Id= Guid.NewGuid(),
                 Age=17,
                 Name="Juan",
                 LastName="Perez",
@@ -22,7 +21,6 @@ namespace TGL.WebApp.Data
             });
             Students.Add(new Student
             {
-                Id = Guid.NewGuid(),
                 Age = 17,
                 Name = "Juan",
                 LastName = "Perez",
@@ -30,12 +28,16 @@ namespace TGL.WebApp.Data
             });
             Students.Add(new Student
             {
-                Id = Guid.NewGuid(),
                 Age = 17,
                 Name = "Juan",
                 LastName = "Perez",
                 Nit = "3134243321"
             });
+        }
+
+        internal void AddStudent(Student student)
+        {
+            Students.Add(student);
         }
 
         internal void DeleteStudent(Guid id)
