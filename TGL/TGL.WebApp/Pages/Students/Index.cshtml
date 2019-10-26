@@ -5,6 +5,7 @@
 }
 <h1>Students</h1>
 
+<a asp-page="Add" class="waves-effect waves-light btn">Create new student</a>
 
 <form method="post">
     <table>
@@ -27,10 +28,19 @@
                     <td>@item.Nit</td>
                     <td>@item.Age</td>
                     <td>
-                        <button type="submit" 
+                        <a 
+                           class="waves-effect waves-light btn"
+                           asp-page="Edit"
+                           asp-route-id="@item.Id">
+                            Edit
+                        </a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                class="waves-effect waves-light btn"
                                 asp-page-handler="delete"
                                 asp-route-id="@item.Id">
-                            delete
+                            Delete
                         </button>
                     </td>
 
@@ -41,6 +51,6 @@
     </table>
 </form>
 
-<a asp-page="Add">Create new student</a>
+
 
 

@@ -1,10 +1,10 @@
 ﻿@page
-@model TGL.WebApp.Pages.Students.AddModel
+@model TGL.WebApp.Pages.Students.EditModel
 @{
-    ViewData["Title"] = "Add";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Add</h1>
+<h1>Edit</h1>
 
 
 <a asp-page="./Index" class="btn-floating btn-large waves-effect waves-light">
@@ -15,23 +15,25 @@
 
 <div class="row">
     <form class="col s12" method="post">
+        <input hidden asp-for="Student.Id" />
+
         <div class="row">
             <div class="input-field col s6">
-                <input id="name" type="text" class="validate" asp-for="Student.Name">
+                <input id="name" class="validate" asp-for="Student.Name">
                 <label for="name">Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" asp-for="Student.LastName">
+                <input id="last_name" class="validate" asp-for="Student.LastName">
                 <label for="last_name">Last Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <input id="nit" type="text" class="validate" asp-for="Student.Nit">
+                <input id="nit" class="validate" asp-for="Student.Nit">
                 <label for="nit">Nit</label>
             </div>
             <div class="input-field col s6">
-                <input id="age" type="text" class="validate" asp-for="Student.Age">
+                <input id="age" class="validate" asp-for="Student.Age">
                 <label for="age">Age</label>
             </div>
         </div>
