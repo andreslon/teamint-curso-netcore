@@ -16,6 +16,7 @@
                 <th>LastName</th>
                 <th>Nit</th>
                 <th>Age</th>
+                <th>Computers</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,17 @@
                     <td>@item.LastName</td>
                     <td>@item.Nit</td>
                     <td>@item.Age</td>
+
+
+                    <td>
+                        @foreach (var computer in item.Computers)
+                        {
+                            <ul>@computer.Brand | @computer.Model | @computer.Ram | @computer.Cpu</ul>
+                        }
+
+                    </td>
+
+
                     <td>
                         <a 
                            class="waves-effect waves-light btn"
@@ -42,6 +54,17 @@
                                 asp-route-id="@item.Id">
                             Delete
                         </button>
+                    </td>
+
+
+
+                    <td>
+                        <a 
+                           class="waves-effect waves-light btn"
+                           asp-page="../Computers/Add"
+                           asp-route-studentid="@item.Id">
+                            <i class="material-icons">computer</i>
+                        </a>
                     </td>
 
                 </tr>

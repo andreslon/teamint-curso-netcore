@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="Pages\Computers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Properties\launchSettings.json" />
