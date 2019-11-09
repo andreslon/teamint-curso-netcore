@@ -50,7 +50,11 @@ namespace TGL.WebApp.Controllers
             StudentStore.EditStudent(student);
             return Ok();
         }
-
+        /// <summary>
+        /// Metodo para eliminar un estudiante por el Identificador
+        /// </summary>
+        /// <param name="id">Identificador del estudiante</param>
+        /// <returns>Retorna OK si fue eliminado</returns>
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
